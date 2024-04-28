@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 16 apr 2024 kl 10:21
+-- Tid vid skapande: 28 apr 2024 kl 15:40
 -- Serverversion: 10.4.28-MariaDB
 -- PHP-version: 8.2.4
 
@@ -80,7 +80,7 @@ CREATE TABLE `table_cars` (
 --
 
 INSERT INTO `table_cars` (`cars_id`, `cars_model`, `cars_brand`, `cars_mileage`, `cars_model_year`, `cars_price`, `cars_hp`, `cars_displacement`, `cars_license`, `cars_inspection_date`, `cars_consumption`, `cars_emissions`, `cars_weight`, `cars_description`, `cars_img`, `cars_owner_fk`, `cars_drivetype_fk`, `cars_fueltype_fk`, `cars_transtype_fk`, `cars_body_style_fk`, `cars_sale_status`) VALUES
-(1, 'Carolla', 'Toyota', 50000, '2020', 30000.00, 0, 0.00, 'CVB-453', '2024-02-14', 0.0, 0, 0, 'Bil :)', '', 1, 1, 1, 1, 3, 0),
+(1, 'Carolla', 'Toyota', 50000, '2020', 30000.00, 0, 0.00, 'CVB-453', '2024-02-14', 0.0, 0, 0, 'Bil :)', '2020-toyota-corolla-hybrid-22.webp', 1, 1, 1, 1, 3, 0),
 (2, 'Civic', 'Honda', 40000, '2014', 20000.00, 0, 0.00, 'DVU-028', '0000-00-00', 0.0, 0, 0, '', 'honda_civic.jpg', 3, 2, 2, 2, 3, 0),
 (3, 'Optima GT', 'Kia', 15000, '2016', 26000.00, 241, 2.00, 'BTV-721', '2024-02-15', 8.5, 35, 2120, '', 'Kia_Optima_GT.jpg', 2, 1, 1, 2, 1, 0);
 
@@ -124,7 +124,8 @@ INSERT INTO `table_fuel_type` (`fuel_type_id`, `fuel_type_name`) VALUES
 (2, 'Diesel'),
 (3, 'Hybrid'),
 (4, 'Gas'),
-(5, 'El');
+(5, 'El'),
+(7, 'E38');
 
 -- --------------------------------------------------------
 
@@ -243,7 +244,7 @@ ALTER TABLE `table_drive_type`
 -- AUTO_INCREMENT för tabell `table_fuel_type`
 --
 ALTER TABLE `table_fuel_type`
-  MODIFY `fuel_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `fuel_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT för tabell `table_owner`
